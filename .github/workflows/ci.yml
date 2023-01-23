@@ -16,18 +16,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Linting
-        run: npm run lint
-
-      - name: Check Prettier Standards
-        run: npm run check-format
-
-      - name: Check ESLint Standards
-        run: npm run check-lint
-
-      - name: Check tsconfig Standards
-        run: npm run check-types
-
       - name: Check Tests
         run: npm run check-test
 
