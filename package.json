@@ -1,6 +1,7 @@
 {
   "name": "my-template-next",
   "version": "0.1.0",
+  "author": "Manoel Neto <maguserv@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "next dev",
