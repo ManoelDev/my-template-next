@@ -6,35 +6,33 @@
     "jest": true,
     "node": true
   },
-  "plugins": ["import-helpers"],
+  "plugins": ["import-helpers", "react-hooks"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off", // para trabalhar com NextJS apenas
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "import-helpers/order-imports": [
       "warn",
       {
-        "newlinesBetween": "always", // Cria uma nova linha para separar as importacoes
+        "newlinesBetween": "always",
         "groups": [
-          ["/^react/", "/^next/"],
+          ["/^react/", "/^next/", "/@next/"],
           "module",
           "/^@shared/",
           "absolute",
           "/^components/",
           "/^pages/",
           "/utils/",
+          "/constants/",
           "/^store/",
           "/^styles/",
           "/^templates/",
           ["parent", "sibling", "index"]
         ],
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        }
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   }
