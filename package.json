@@ -11,6 +11,7 @@
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check ./src",
     "check-lint": "eslint ./src --ext ts --ext tsx --ext js --max-warnings=0",
+    "check-test": "jest --bail --coverage=false",
     "test": "jest",
     "test:w": "jest --watch",
     "prepare": "husky install"

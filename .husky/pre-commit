@@ -27,7 +27,7 @@ Are you seriously trying to write that? Make the changes required above.'
     false;
 )
 
-npm run test --findRelatedTests --bail ||
+npm run check-test ||
 (
     echo '❌👷🔨❌ Its F**KING RAW - Your test looks disgusting. ❌👷🔨❌
     '

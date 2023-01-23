@@ -1,0 +1,32 @@
+name: ci
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check Prettier Standards
+        run: npm run check-format
+
+      - name: Check ESLint Standards
+        run: npm run check-lint
+
+      - name: Check tsconfig Standards
+        run: npm run check-types
+
+      - name: Check Tests
+        run: npm run check-test
+
+      - name: Check Building
+        run: npm build
