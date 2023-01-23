@@ -27,12 +27,12 @@ Are you seriously trying to write that? Make the changes required above.'
     false;
 )
 
-# npm run test --findRelatedTests --bail ||
-# (
-#     echo '❌👷🔨❌ Its F**KING RAW - Your test looks disgusting. ❌👷🔨❌
-#     '
-#     false;
-# )
+npm run test --findRelatedTests --bail ||
+(
+    echo '❌👷🔨❌ Its F**KING RAW - Your test looks disgusting. ❌👷🔨❌
+    '
+    false;
+)
 
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
